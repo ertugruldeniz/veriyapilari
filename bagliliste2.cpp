@@ -1,4 +1,4 @@
-//DÖNGÜNELERÝ KULLANARAK BAÐLI LÝSTE YAPIMI
+//donguleri kullanarak bagli liste yapimi
 #include <stdio.h>
 
 #include <stdlib.h>
@@ -15,7 +15,7 @@ struct liste{
 
 typedef liste node;
 
-//link list içeriðini yazdýran fonksiyon
+//link list icerigini yazdiran fonksiyon
 void yazdir(node *iter){
 	int sayac=1;
 	while(iter!=NULL){
@@ -33,7 +33,7 @@ void ekle(node *iter,int x){
 			iter=iter->next;
 		}
 		
-		//DÖNGÜ ÝLE BAÐLI LÝSTE SONUNA ELAMAN EKKETÝYORUZ 
+		//listenin sonuna elaman ekleyip en sondaki degeri null yapÄ±yoruz
 		iter->next=(node *)malloc(sizeof(node));
 		
 		iter->next->data=x;
@@ -45,7 +45,7 @@ void ekle(node *iter,int x){
 
 int main() {
 	
-	node *root ; //KÖK DÝZÝN
+	node *root ; //KÃ–K dizin
 	
 	
 	root=(node*)malloc(sizeof(node));
@@ -63,6 +63,6 @@ int main() {
 	}
 	
 
-	yazdir(root); // yazdir(root->next); de baþlatýlabilir
+	yazdir(root); //yazdirmaya root elemanÄ±ndan basla ve devam et.
 	
 }
